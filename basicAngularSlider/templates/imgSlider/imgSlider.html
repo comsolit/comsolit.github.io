@@ -1,0 +1,5 @@
+﻿<div class="slider">
+    <button class="slider-prev" ng-click="prev()"><i class="fa fa-fw fa-arrow-left"></i></button>
+    <img ng-repeat="image in images" ng-src="{{image}}" ng-hide="!isCurrentIndex($index)" ng-class="{'ng-hide': hidden}" />
+    <button class="slider-next" ng-click="next()"><i class="fa fa-fw fa-arrow-right"></i></button>
+</div>

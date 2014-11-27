@@ -1,0 +1,70 @@
+﻿.slider {
+    position: relative;
+
+    @media (max-width: 991px) {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .slider-next, .slider-prev {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 10%;
+        background-color: transparent;
+        border: none;
+        color: lightgray;
+        z-index: 1000;
+
+        &:hover, &:focus {
+            color: orange;
+            cursor: pointer !important;
+        }
+
+        &:focus:not(:hover) {
+            color: lightgray;
+        }
+
+        font-size: 1.2em;
+
+        @media (max-width: 1199px) {
+            font-size: 1em;
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    .slider-prev {
+        left: 0;
+    }
+
+    .slider-next {
+        right: 0;
+    }
+
+    img {
+        display: block;
+        border: 1px solid transparent;
+        max-width: 100%;
+
+        &.ng-hide-remove {
+            opacity: 1;
+            -moz-animation: fadeIn 1s;
+            -o-animation: fadeIn 1s;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        &.ng-hide-add {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            -moz-animation: fadeOut 1s;
+            -o-animation: fadeOut 1s;
+            -webkit-animation: fadeOut 1s;
+            animation: fadeOut 1s;
+        }
+    }
+}
